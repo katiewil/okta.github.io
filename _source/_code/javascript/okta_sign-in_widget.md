@@ -1,7 +1,7 @@
 ---
 layout: docs_page
 title: Okta Sign-In Widget
-excerpt: A drop-in widget with custom UI capabilities to power sign-in with Okta. An <a href="/code/javascript/okta_sign-in_widget_ref.html">in-depth reference</a> is also available.
+excerpt: A drop-in widget with custom UI capabilities to power sign-in with Okta. An in-depth reference is also available.
 weight: 1
 redirect_from:
     - "/docs/guides/okta_sign-in_widget.html"
@@ -26,7 +26,7 @@ for things like invalid passwords or blank fields.
 ### Multi-Factor Authentication
 
 The Okta Sign-In Widget also comes with full support for Multi-Factor
-Authentication user flows. It handles enrollment and verification
+Authentication. It handles enrollment and verification
 of factors and comes with built-in support for all of the factors listed below:
 
 -   Okta Verify
@@ -39,7 +39,7 @@ of factors and comes with built-in support for all of the factors listed below:
 
 {% img okta-signin-mfa-select.png alt:"Screenshot of Okta Sign-In Widget Multi-Factor Authentication selector" %}
 
-### Self service password reset
+### Self-Service Password Reset
 
 The Okta Sign-In Widget has everything you need to give your users the
 ability to reset their forgotten passwords, it comes with support
@@ -50,16 +50,13 @@ themselves by prompting them to answer a security question.
 
 ### Password Expiration
 
-Another feature of the Okta Sign-In Widget is notifying users when their password has expired
-and prompting them to update their password before allowing them to
-log in.
+Another feature of the Okta Sign-In Widget is notifying users when their password has expired and prompting them to update their password before allowing them to sign in.
 
 {% img okta-signin-password-expired.png alt:"Screenshot of Okta Sign-In Widget password expired dialog" %}
 
 ### Validation and error handling
 
-Finally, the Okta Sign-In Widget comes with extensive support for validating user
-input as well as handling every imaginable error condition which
+Finally, the Okta Sign-In Widget comes with extensive support for validating user input as well as handling every imaginable error condition which
 might occur in a user login flow.
 
 {% img okta-signin-validation-failure.png alt:"Screenshot of Okta Sign-In Widget displaying validation error" %}
@@ -69,7 +66,9 @@ might occur in a user login flow.
 If you are a developer, the best way to understand the Okta
 Sign-In Widget is to look at a simple example of the HTML
 needed to get it working. The HTML below shows you how to quickly
-and easily set up a fully featured login experience:
+and easily set-up a fully featured login experience:
+
+jakub.todo: Should this version number be updated? If so, how?
 
 ~~~ html
 <head>
@@ -97,15 +96,14 @@ and easily set up a fully featured login experience:
 
 Here is what is happening in the HTML above:
 
-First, in the `<head>`
-tag, we include the  `okta-sign-in.min.js` and
+First, in the `<head>` tag, we include the  `okta-sign-in.min.js` and
 `okta-sign-in.min.css` files. These files have all of the
 logic and default stylesheets used by the Okta Sign-In Widget.
 
-We also include the `okta-theme.css` file, which adds Okta's own custom theme you get in the login page of your Okta organization if you have enabled the New Sign-In Page setting in `Admin -> Settings -> Appearance` in the `Sign-In Configuration` section. You can choose not to include this okta-theme.css stylesheet if you so wish.
+We also include the `okta-theme.css` file, which adds Okta's own custom theme. This is the same theme you see on the login page of your Okta organization, assuming you have enabled the New Sign-In Page setting in `Admin -> Settings -> Appearance` in the `Sign-In Configuration` section. You can choose not to include this `okta-theme.css` stylesheet if you so wish.
 
-In the `<body>`, we add a `<div>` tag with an "`id`" of
-`okta-login-container`  &#x2013; you can use any "`id`" value in this tag,
+In the `<body>`, we add a `<div>` tag with an `id` value of
+`okta-login-container`. You can use any `id` value in this tag,
 we are just using `okta-login-container` here for the sake of clarity.
 
 Next, we add some JavaScript code to insert the Okta Sign-In Widget
@@ -119,9 +117,9 @@ initializes the Okta Sign-In Widget object, note that
 the `baseUrl` value **MUST** be the domain for *your* Okta
 organization. If you don't already have an Okta organization, please read the "Creation an Okta organization" section below.
 
-For example, if your Okta organization is "`acme.okta.com`" you
-would replace the string "`example.okta.com`" below with
-"`acme.okta.com`":
+For example, if your Okta organization is `acme.okta.com` you
+would replace the string `example.okta.com` below with
+`acme.okta.com`:
 
 ~~~ javascript
 var baseUrl = 'https://example.okta.com';
@@ -255,12 +253,12 @@ replace all instances of the string `example.okta.com` with the
 
 **NOTE:** If you aren't sure what the "fully qualified domain name" for your
 Okta organization is, it is simply the "[domain](https://en.wikipedia.org/wiki/Uniform_Resource_Locator#Syntax)" part of the URL
-that you use to log in to Okta. For example, if your company name
-is "Acme" and you log in to Okta using the
+that you use to sign in to Okta. For example, if your company name
+is "Acme" and you sign in to Okta using the
 `https://acme.okta.com` then your fully qualified domain name
-would be "`acme.okta.com`". Likewise, if you are using an Okta
+would be `acme.okta.com`. Likewise, if you are using an Okta
 Developer Edition organization, your domain will be something like
-"`dev-12345.oktapreview.com`".
+`dev-12345.oktapreview.com`.
 
 There is just one line you will need to modify in
 `login-to-okta.html` to get the sample working in your own environment. Simply  update the two lines below to match your environment with your fully qualified domain name in the following line:
@@ -319,7 +317,7 @@ Here are two things for you to try:
 3.  [Configure Multifactor Authentication](https://support.okta.com/help/articles/Knowledge_Article/27315047-Configuring-Multifactor-Authentication)
     for your Okta org and try logging in using the Okta Sign-In Widget.
 
-    If you are redirected when you log in successfully, then it works!
+    If you are redirected when you sign in successfully, then it works!
     Your next step is to configure the Okta Sign-In Widget for your specific requirements.
 
 ## Customization
